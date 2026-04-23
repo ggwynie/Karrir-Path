@@ -1,11 +1,13 @@
+
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
-import { useRouter, useSearchParams } from 'next/navigation'; // Untuk pindah halaman
+import { useRouter, useSearchParams } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 import styles from './login.module.css';
 
-export default function LoginPage() {
+
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [error, setError] = useState('');
@@ -38,15 +40,11 @@ export default function LoginPage() {
         setError(res.error);
         setLoading(false);
       } else {
-        // Fetch session to get user role
         const sessionRes = await fetch('/api/auth/session');
         const sessionData = await sessionRes.json();
         
-        // Save role to localStorage
         if (sessionData?.user?.role) {
           localStorage.setItem('karrirpath_user_role', sessionData.user.role);
-          
-          // Redirect based on role
           if (sessionData.user.role === 'mentor') {
             router.push('/dashboard/mentorship');
           } else if (sessionData.user.role === 'recruiter') {
@@ -57,7 +55,6 @@ export default function LoginPage() {
         } else {
           router.push('/dashboard');
         }
-        
         router.refresh();
       }
     } catch (err) {
@@ -83,12 +80,10 @@ export default function LoginPage() {
             <label className={styles.label}>Email</label>
             <input type="email" name="email" placeholder="nama@email.com" className={styles.input} required />
           </div>
-
           <div className={styles.fieldGroup}>
             <label className={styles.label}>Password</label>
             <input type="password" name="password" placeholder="••••••••" className={styles.input} required />
           </div>
-
           <button type="submit" className={styles.submitBtn} disabled={loading}>
             {loading ? 'Memproses...' : 'Masuk'}
           </button>
@@ -96,12 +91,9 @@ export default function LoginPage() {
 
         <p className={styles.footer}>
           Belum punya akun?{' '}
-          <Link href="/register" className={styles.footerLink}>
-            Daftar di sini
-          </Link>
+          <Link href="/register" className={styles.footerLink}>Daftar di sini</Link>
         </p>
 
-        {/* Divider */}
         <div className={styles.divider}>
           <div className={styles.dividerLine} />
           atau
@@ -123,5 +115,14 @@ export default function LoginPage() {
         </button>
       </div>
     </div>
+  );
+}
+
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginForm />
+    </Suspense>
   );
 }
