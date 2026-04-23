@@ -1,0 +1,711 @@
+.wrapper {
+  min-height: calc(100vh - 65px);
+  background-color: #f4f4f2;
+  padding: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Sidebar Card ── */
+.sideCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.avatarCard {
+  background: #ffffff;
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 96px;
+  height: 96px;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f5c842;
+}
+
+.avatarFallback {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #f5c842;
+  border: 3px solid #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 900;
+  color: #111111;
+}
+
+.avatarEditBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  background-color: #111111;
+  border: 2px solid #f5c842;
+  border-radius: 50%;
+  color: #f5c842;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.avatarEditBtn:hover {
+  background-color: #f5c842;
+  color: #111111;
+  transform: scale(1.1);
+}
+
+.userName {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #111111;
+  margin: 0;
+}
+
+.userRole {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888888;
+  margin: 0;
+}
+
+.userEmail {
+  font-size: 12px;
+  color: #555555;
+  margin: 0;
+}
+
+.completionBar {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.completionLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888888;
+  margin-bottom: 6px;
+}
+
+.completionTrack {
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  border: 1px solid #111111;
+}
+
+.completionFill {
+  height: 100%;
+  background-color: #f5c842;
+  transition: width 0.3s;
+}
+
+/* Sidebar nav */
+.sideNav {
+  background: #ffffff;
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  overflow: hidden;
+}
+
+.sideNavItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555555;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: none;
+  border-left: 3px solid transparent;
+  width: 100%;
+  text-align: left;
+}
+
+.sideNavItem:last-child {
+  border-bottom: none;
+}
+
+.sideNavItem:hover {
+  background-color: #f4f4f2;
+  color: #111111;
+}
+
+.sideNavItemActive {
+  background-color: #f4f4f2;
+  color: #111111;
+  border-left-color: #f5c842;
+}
+
+.sideNavIcon {
+  font-size: 16px;
+}
+
+/* ── Main Content ── */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Section Card */
+.card {
+  background: #ffffff;
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 2px solid #111111;
+  background-color: #f4f4f2;
+}
+
+.cardTitle {
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #111111;
+  margin: 0;
+}
+
+.editBtn {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111111;
+  background: none;
+  border: 2px solid #111111;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.editBtn:hover {
+  background-color: #111111;
+  color: #f5c842;
+}
+
+.saveBtn {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111111;
+  background-color: #f5c842;
+  border: 2px solid #111111;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.saveBtn:hover {
+  background-color: #e0b63a;
+}
+
+.cardBody {
+  padding: 24px;
+}
+
+/* Form Grid */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formGroupFull {
+  grid-column: 1 / -1;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888888;
+}
+
+.input,
+.select,
+.textarea {
+  padding: 10px 14px;
+  border: 2px solid #d0d0d0;
+  background-color: #f9f9f9;
+  font-size: 13px;
+  color: #111111;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #111111;
+  background-color: #ffffff;
+}
+
+.input:disabled,
+.select:disabled,
+.textarea:disabled {
+  background-color: #f4f4f2;
+  color: #555555;
+  border-color: #e0e0e0;
+  cursor: default;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.staticText {
+  font-size: 13px;
+  color: #333333;
+  padding: 10px 0;
+  line-height: 1.6;
+}
+
+.staticEmpty {
+  font-size: 12px;
+  color: #aaaaaa;
+  font-style: italic;
+  padding: 10px 0;
+}
+
+/* Skills */
+.skillsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skillTag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background-color: #f5c842;
+  border: 2px solid #111111;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111111;
+}
+
+.skillRemove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 900;
+  color: #111111;
+  padding: 0;
+  line-height: 1;
+}
+
+.skillInput {
+  display: flex;
+  gap: 8px;
+}
+
+.skillInputField {
+  flex: 1;
+  padding: 8px 14px;
+  border: 2px solid #d0d0d0;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.skillInputField:focus {
+  border-color: #111111;
+}
+
+.skillAddBtn {
+  padding: 8px 16px;
+  background-color: #111111;
+  color: #ffffff;
+  border: 2px solid #111111;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.skillAddBtn:hover {
+  background-color: #f5c842;
+  color: #111111;
+}
+
+/* Experience / Education items */
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  position: relative;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.itemTitle {
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
+  color: #111111;
+  margin: 0;
+}
+
+.itemSubtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #555555;
+  margin: 2px 0;
+}
+
+.itemPeriod {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f5c842;
+  background-color: #111111;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.itemDesc {
+  font-size: 12px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 8px 0 0 0;
+}
+
+.itemRemoveBtn {
+  background: none;
+  border: 1px solid #cccccc;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #888888;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.15s;
+}
+
+.itemRemoveBtn:hover {
+  background-color: #ff6b6b;
+  border-color: #ff6b6b;
+  color: #ffffff;
+}
+
+.addItemBtn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: 2px dashed #cccccc;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888888;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.addItemBtn:hover {
+  border-color: #111111;
+  color: #111111;
+  background-color: #f4f4f2;
+}
+
+/* Add form */
+.addForm {
+  margin-top: 12px;
+  padding: 16px;
+  border: 2px solid #f5c842;
+  background-color: #fffdf0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addFormRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.addFormActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.cancelBtn {
+  padding: 8px 16px;
+  background: none;
+  border: 2px solid #cccccc;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888888;
+  cursor: pointer;
+}
+
+.cancelBtn:hover {
+  border-color: #111111;
+  color: #111111;
+}
+
+/* Save success */
+.savedBadge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111111;
+  background-color: #f5c842;
+  border: 2px solid #111111;
+  padding: 5px 12px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper {
+    padding: 24px 20px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── CV Upload ── */
+.cvDropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 40px 24px;
+  border: 2px dashed #cccccc;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.cvDropzone:hover {
+  border-color: #111111;
+  background-color: #f4f4f2;
+}
+
+.cvDropIcon {
+  font-size: 32px;
+  opacity: 0.4;
+}
+
+.cvDropTitle {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111111;
+  margin: 0;
+}
+
+.cvDropSub {
+  font-size: 11px;
+  color: #888888;
+  margin: 0;
+}
+
+.cvUploaded {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: 2px solid #111111;
+  background-color: #fffdf0;
+}
+
+.cvFileInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cvIcon {
+  font-size: 28px;
+}
+
+.cvFileName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+.cvFileStatus {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #16a34a;
+  margin: 2px 0 0 0;
+}
+
+.cvReplaceBtn {
+  padding: 6px 14px;
+  background-color: #111111;
+  color: #ffffff;
+  border: 2px solid #111111;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.cvReplaceBtn:hover {
+  background-color: #f5c842;
+  color: #111111;
+}
+
+/* ── Cert Section ── */
+.certItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  gap: 12px;
+}
+
+.certLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+.certBadge {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.certRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.certSpec {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  background-color: #111111;
+  color: #f5c842;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.certLink {
+  padding: 4px 10px;
+  border: 2px solid #111111;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111111;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.certLink:hover {
+  background-color: #f5c842;
+}

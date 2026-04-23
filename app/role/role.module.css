@@ -1,0 +1,118 @@
+.wrapper {
+  min-height: calc(100vh - 65px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f2;
+  padding: 48px 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #111111;
+  color: #f5c842;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 0.95;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.titleAccent {
+  color: #f5c842;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  padding: 36px 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card:hover {
+  border-color: #111111;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.cardLoading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.cardIcon {
+  font-size: 32px;
+}
+
+.cardNumber {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f5c842;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #111111;
+}
+
+.cardDesc {
+  font-size: 12px;
+  color: #888888;
+  line-height: 1.6;
+}
+
+.cardArrow {
+  font-size: 20px;
+  color: #111111;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+}

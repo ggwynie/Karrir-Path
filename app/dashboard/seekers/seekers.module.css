@@ -1,0 +1,160 @@
+.wrapper {
+  min-height: calc(100vh - 65px);
+  background-color: #f4f4f2;
+  padding: 56px 48px;
+}
+
+/* ── Header ── */
+.header {
+  margin-bottom: 40px;
+}
+
+.greeting {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888888;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  line-height: 0.95;
+  color: #111111;
+  margin: 0;
+}
+
+.titleAccent {
+  color: #f5c842;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* ── Card ── */
+.card {
+  background-color: #ffffff;
+  border: 2px solid #111111;
+  padding: 32px 24px 28px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 6px 6px 0px 0px #111111;
+  border-radius: 2px;
+}
+
+.card:hover {
+  background-color: #f5c842;
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0px 0px #111111;
+}
+
+.cardEmoji {
+  font-size: 38px;
+  line-height: 1;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.cardTag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #aaaaaa;
+}
+
+.card:hover .cardTag {
+  color: #555555;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #111111;
+  line-height: 1;
+  margin: 0;
+}
+
+.cardDesc {
+  font-size: 12px;
+  color: #666666;
+  line-height: 1.7;
+  flex: 1;
+  margin-top: 4px;
+}
+
+.card:hover .cardDesc {
+  color: #333333;
+}
+
+.cardStats {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 14px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 8px;
+}
+
+.card:hover .cardStats {
+  border-top-color: rgba(0,0,0,0.2);
+}
+
+.statItem {
+  font-size: 11px;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.statDot {
+  width: 5px;
+  height: 5px;
+  background-color: #111111;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cardArrow {
+  font-size: 20px;
+  font-weight: 900;
+  color: #111111;
+  margin-top: 14px;
+  text-align: right;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    padding: 32px 20px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
