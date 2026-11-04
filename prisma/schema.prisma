@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -30,12 +30,12 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String? @db.Text
-  access_token      String? @db.Text
+  refresh_token     String?
+  access_token      String?
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String? @db.Text
+  id_token          String?
   session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -67,7 +67,7 @@ model Roadmap {
   id          String   @id @default(cuid())
   userId      String
   title       String
-  content     String   @db.LongText
+  content     String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
@@ -84,17 +84,17 @@ model MentorProfile {
   company          String
   yearsExperience  Int      @default(0)
   category         String   @default("Tech")
-  bio              String   @db.Text
-  expertise        String   @db.Text  // JSON array
+  bio              String
+  expertise        String  // JSON array
   hourlyRate       String
   profilePhotoUrl  String?
   cvUrl            String?
-  certifications   String?  @db.LongText  // JSON array
-  projects         String?  @db.LongText  // JSON array
-  socialLinks      String?  @db.Text      // JSON object
-  availability     String?  @db.Text      // JSON object
-  languages        String?  @db.Text      // JSON array
-  education        String?  @db.LongText  // JSON array
+  certifications   String?  // JSON array
+  projects         String?  // JSON array
+  socialLinks      String?  // JSON object
+  availability     String?  // JSON object
+  languages        String?  // JSON array
+  education        String?  // JSON array
   isApproved       Boolean  @default(false)
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt

@@ -4,6 +4,10 @@ Platform karir all-in-one untuk job seekers, mentors, dan recruiters di Indonesi
 
 **Live Demo:** [https://karrir-path.vercel.app](https://karrir-path.vercel.app)
 
+## Screenshot
+
+![KarrirPath landing page](./screenshots/landingpage.png)
+
 ## Overview
 
 KarrirPath adalah platform yang menghubungkan pencari kerja dengan peluang karir, mentor profesional, dan perusahaan. Platform ini menyediakan sistem matching otomatis, AI-powered career roadmap, dan dashboard lengkap untuk semua stakeholder.
