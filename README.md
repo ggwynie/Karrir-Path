@@ -8,6 +8,42 @@ Platform karir all-in-one untuk job seekers, mentors, dan recruiters di Indonesi
 
 KarrirPath adalah platform yang menghubungkan pencari kerja dengan peluang karir, mentor profesional, dan perusahaan. Platform ini menyediakan sistem matching otomatis, AI-powered career roadmap, dan dashboard lengkap untuk semua stakeholder.
 
+## Screenshots
+
+### Beranda dan lowongan
+
+| Beranda | Kategori lowongan |
+| --- | --- |
+| ![Beranda KarrirPath](screenshots/landingpage.png) | ![Kategori lowongan kerja](screenshots/img46.jpg) |
+
+### Mentorship
+
+| Halaman mentorship | Daftar mentor |
+| --- | --- |
+| ![Halaman mentorship](screenshots/img47.jpg) | ![Daftar mentor](screenshots/img48.jpg) |
+
+| Profil mentor | Jadwal konsultasi |
+| --- | --- |
+| ![Profil mentor](screenshots/img51.jpg) | ![Jadwal konsultasi](screenshots/img52.jpg) |
+
+| Chat dengan mentor | CV dan sertifikat |
+| --- | --- |
+| ![Chat dengan mentor](screenshots/img53.jpg) | ![Unggah CV dan sertifikat](screenshots/img57.jpg) |
+
+### Perusahaan dan roadmap karir
+
+| Daftar perusahaan | Detail perusahaan |
+| --- | --- |
+| ![Daftar perusahaan](screenshots/img58.jpg) | ![Detail perusahaan](screenshots/img61.jpg) |
+
+| Form roadmap karir | Roadmap karir |
+| --- | --- |
+| ![Form roadmap karir](screenshots/img62.jpg) | ![Tampilan roadmap karir](screenshots/img63.jpg) |
+
+### Konfirmasi keluar
+
+![Konfirmasi keluar dari akun](screenshots/img66.jpg)
+
 ## Key Features
 
 **For Job Seekers**
