@@ -10,17 +10,15 @@ KarrirPath adalah platform yang menghubungkan pencari kerja dengan peluang karir
 
 ## Screenshots
 
-### Beranda dan lowongan
+### Beranda dan kategori lowongan
 
-| Beranda | Kategori lowongan |
-| --- | --- |
-| ![Beranda KarrirPath](screenshots/landingpage.png) | ![Kategori lowongan kerja](screenshots/img46.jpg) |
+| Beranda | Beranda | Kategori lowongan |
+| --- | --- | --- |
+| ![Beranda KarrirPath](screenshots/landingpage.png) | ![Beranda KarrirPath untuk pengguna](screenshots/img46.jpg) | ![Kategori lowongan kerja](screenshots/img47.jpg) |
 
 ### Mentorship
 
-| Halaman mentorship | Daftar mentor |
-| --- | --- |
-| ![Halaman mentorship](screenshots/img47.jpg) | ![Daftar mentor](screenshots/img48.jpg) |
+![Daftar mentor](screenshots/img48.jpg)
 
 | Profil mentor | Jadwal konsultasi |
 | --- | --- |
